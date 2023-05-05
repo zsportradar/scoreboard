@@ -31,6 +31,10 @@ class GameTest {
         shouldThrow<IllegalArgumentException> {
             game.withScore((1 to -1))
         }
+
+        shouldThrow<IllegalArgumentException> {
+            game.withScore((-1 to 1))
+        }
     }
 
     @Test
